@@ -5,7 +5,7 @@ import getBestCombination from './algorithms/getBestCombination'
 
 function App() {
   const [currentValue, setValue] = useState([])
-  const [answer, setAnswer] = useState("")
+  const [answer, setAnswer] = useState("Press Calculate to show best combination")
   const [calculated, setCalculated] = useState(false)
   const calculate = () => {
     let [cardArr, answer] = getBestCombination(currentValue)
@@ -22,9 +22,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="app-title">Ngao Calculator</h1>
+        <h1 className="app-title"> <i>&#128046;</i>Ngao Calculator<i>&#128046;</i></h1>
       </header>
-      <hr />
       <body>
         <div className="top-part">
           <CardSelection
@@ -34,16 +33,9 @@ function App() {
           />
         </div>
 
-        <hr />
-
         <div className="btm-part"
           style={currentValue.length < 5 ? { display: "none" } : null}
         >
-          <h1 className="reset-button"
-            onClick={() => reset()}
-          >
-            Repick Cards
-          </h1>
 
           <CardDisplay
             cardsToDisplay={currentValue}
@@ -52,6 +44,11 @@ function App() {
           />
 
           <h1 className="calculate-button" onClick={() => calculate()}>Calculate</h1>
+          <h1 className="reset-button"
+            onClick={() => reset()}
+          >
+            Repick Cards
+          </h1>
 
         </div>
 

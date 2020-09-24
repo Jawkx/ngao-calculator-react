@@ -28,7 +28,7 @@ function CardSelection(props) {
     )
     return (
         <div className="card-selection">
-            {props.cardSelectionDisplay ? <h1 className="card-selection-text"> Select 5 cards</h1> : <h1 className="card-selection-text">Already Selected 5 cards</h1>}
+            {props.cardSelectionDisplay ? <h1 className="card-selection-text"> Select 5 cards</h1> : null}
             {props.cardSelectionDisplay ? <SmallDisplay cardArr={props.currentValue} /> : null}
             <div className=" playing-card-container">
                 {props.cardSelectionDisplay ? cardsArr : null}

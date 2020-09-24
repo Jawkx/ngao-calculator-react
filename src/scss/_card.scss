@@ -2,15 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 0.5em;
     .playing-card {
         background-color: white;
         position: relative;
-        height: 120px;
+        height: 110px;
         width: 85px;
-        margin: 1em;
-        -webkit-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.56);
-        -moz-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.56);
-        box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.56);
+        margin: 0.5em;
+        -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.56);
+        -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.56);
+        box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.56);
         border-radius: 8%;
         border: solid 1px black;
         transition: transform 0.2s;
