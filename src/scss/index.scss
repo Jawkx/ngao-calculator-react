@@ -1,9 +1,16 @@
 @import "./reset";
 
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 @import "../components/CardSelection/CardSelection.scss";
 @import "../components/CardDisplay/CardDisplay.scss";
 
 @import "./card";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -23,9 +30,15 @@ code {
 }
 
 .btm-part {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 
+  @include mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
   .reset-button {
     background-color: lightcoral;
     cursor: pointer;

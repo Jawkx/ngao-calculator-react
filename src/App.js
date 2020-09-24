@@ -37,7 +37,7 @@ function App() {
         <hr />
 
         <div className="btm-part"
-          style={currentValue.length < 5 ? { display: "none" } : { display: "flex" }}
+          style={currentValue.length < 5 ? { display: "none" } : null}
         >
           <h1 className="reset-button"
             onClick={() => reset()}
