@@ -17,10 +17,12 @@ export const getLargestNumber = arr => {
             num2 = 3
         }
         var sum = num1 + num2
-        allAddition.push([i, sum % 10])
+        var result = sum % 10
+        allAddition.push([i, (result === 0) ? 10 : result])
         for (let j = 0; j < sixThreeNum; j++) {
             sum += 3
-            allAddition.push([i, sum % 10])
+            result = sum % 10
+            allAddition.push([i, (result === 0) ? 10 : result])
         }
     }
 
