@@ -16,11 +16,11 @@ export const getLargestNumber = arr => {
             sixThreeNum += 1
             num2 = 3
         }
-        const sum = num1 + num2
+        var sum = num1 + num2
         allAddition.push([i, sum % 10])
-
         for (let j = 0; j < sixThreeNum; j++) {
-            allAddition.push([i, (sum + j) / 10])
+            sum += 3
+            allAddition.push([i, sum % 10])
         }
     }
 
