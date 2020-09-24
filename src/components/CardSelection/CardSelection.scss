@@ -1,0 +1,44 @@
+.card-selection {
+    position: relative;
+    z-index: 1;
+
+    .small-display {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        div {
+            display: flex;
+            flex-direction: row;
+            margin: 3px;
+            border: solid 1px grey;
+            border-radius: 5px;
+        }
+    }
+    .card-selection-text {
+        text-align: center;
+    }
+    .playing-card-display:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .choose-suit {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 2em;
+        align-items: center;
+        justify-content: space-around;
+        .suit-button {
+            padding: 1%;
+            width: 45%;
+            cursor: pointer;
+        }
+
+        .suit-button:hover {
+            background-color: grey;
+            opacity: 0.8;
+        }
+    }
+}
