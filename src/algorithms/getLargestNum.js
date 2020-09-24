@@ -11,5 +11,5 @@ export const getLargestNumber = arr => {
         }
     }
 
-    return [arr[largestSumIdx], largestSum]
+    return [arr[largestSumIdx], "Number:".concat(largestSum.toString(10))]
 }

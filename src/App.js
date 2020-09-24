@@ -26,8 +26,7 @@ function App() {
       </header>
       <hr />
       <body>
-        <div className="selection">
-
+        <div className="top-part">
           <CardSelection
             handleClick={(value) => { setValue(currentValue.concat([value])) }}
             cardSelectionDisplay={currentValue.length < 5}
@@ -37,16 +36,23 @@ function App() {
 
         <hr />
 
-        <div className="calculation"
-          style={currentValue.length < 5 ? { display: "none" } : { display: "block" }}
+        <div className="btm-part"
+          style={currentValue.length < 5 ? { display: "none" } : { display: "flex" }}
         >
-          <h1 className="reset-button" onClick={() => reset()} > Reset </h1>
+          <h1 className="reset-button"
+            onClick={() => reset()}
+          >
+            Repick Cards
+          </h1>
+
           <CardDisplay
             cardsToDisplay={currentValue}
             calculated={calculated}
+            answer={answer}
           />
-          {currentValue.length < 5 ? null : <h1 className="calculate-button" onClick={() => calculate()}>Calculate</h1>}
-          <h1 className="answer">{answer}</h1>
+
+          <h1 className="calculate-button" onClick={() => calculate()}>Calculate</h1>
+
         </div>
 
       </body>

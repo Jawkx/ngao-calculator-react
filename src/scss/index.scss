@@ -21,3 +21,40 @@ code {
   font-size: 3em;
   text-align: center;
 }
+
+.btm-part {
+  align-items: center;
+  justify-content: space-evenly;
+
+  .reset-button {
+    background-color: lightcoral;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .reset-button:hover {
+    opacity: 0.9;
+  }
+  .card-display {
+    margin: 1em;
+    .answer {
+      font-size: 2em;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .calculate-button {
+    background-color: lightgreen;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .calculate-button:hover {
+    opacity: 0.9;
+  }
+}

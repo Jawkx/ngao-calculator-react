@@ -21,6 +21,7 @@ function CardDisplay(props) {
             <div className="display-card-container playing-card-container">
                 {cardsBack}
             </div>
+            <h1 className="answer">{props.answer}</h1>
         </div>
     )
 }
