@@ -31,6 +31,7 @@ function App() {
             cardSelectionDisplay={currentValue.length < 5}
             currentValue={currentValue}
           />
+          
         </div>
 
         <div className="btm-part"

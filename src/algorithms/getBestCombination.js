@@ -4,8 +4,23 @@ import { getPermutation } from './getPermutation'
 import { checkDonggu } from './checkDonggu'
 import { checkBouBou } from './checkBouBou'
 import { getLargestNumber } from './getLargestNum'
+import { findDupes } from './findDupes'
 
 const getBestCombination = arr => {
+    
+    const allPosibility = getPermutation(arr)
+    const allPassport = getPassport(allPosibility)
+
+    if (findDupes(arr)) {
+        return [arr, "invalid, dupes."]
+    }
+
+    if (allPassport.length !== 0) {
+        for (let i = 0; i < allPassport.length; i++) {
+            if (checkFullPicture(allPassport[i])) {
+                return [allPassport[i], "Full Picture"]
+            }
+
     if (arr.length === 5) {
         const allPosibility = getPermutation(arr)
         const allPassport = getPassport(allPosibility)
@@ -15,6 +30,7 @@ const getBestCombination = arr => {
                 if (checkFullPicture(allPassport[i])) {
                     return [allPassport[i], "Full Picture"]
                 }
+
 
                 if (checkDonggu(allPassport[i])) {
                     return [allPassport[i], "Dong gu"]
