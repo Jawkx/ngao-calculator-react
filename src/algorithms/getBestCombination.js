@@ -4,10 +4,16 @@ import { getPermutation } from './getPermutation'
 import { checkDonggu } from './checkDonggu'
 import { checkBouBou } from './checkBouBou'
 import { getLargestNumber } from './getLargestNum'
+import { findDupes } from './findDupes'
 
 const getBestCombination = arr => {
+    
     const allPosibility = getPermutation(arr)
     const allPassport = getPassport(allPosibility)
+
+    if (findDupes(arr)) {
+        return [arr, "invalid, dupes."]
+    }
 
     if (allPassport.length !== 0) {
         for (let i = 0; i < allPassport.length; i++) {
