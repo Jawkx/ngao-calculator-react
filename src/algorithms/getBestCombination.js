@@ -10,15 +10,15 @@ const getBestCombination = arr => {
 
     const allPosibility = getPermutation(arr)
     const allPassport = getPassport(allPosibility)
-
+    if (findDupes(arr)) {
+        return [arr, "Invalid : Duplicate card"]
+    }
     if (allPassport.length !== 0) {
         for (let i = 0; i < allPassport.length; i++) {
 
             const allPosibility = getPermutation(arr)
             const allPassport = getPassport(allPosibility)
-            if (findDupes(arr)) {
-                return [arr, "invalid, dupes."]
-            }
+
             if (allPassport.length !== 0) {
                 for (let i = 0; i < allPassport.length; i++) {
                     if (checkFullPicture(allPassport[i])) {
