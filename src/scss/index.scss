@@ -39,6 +39,16 @@ code {
   }
 }
 
+.top-part {
+  .reset-button {
+    background-color: lightcoral;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+}
 .btm-part {
   //padding: 0.5em 0 0.5em 0;
   display: flex;

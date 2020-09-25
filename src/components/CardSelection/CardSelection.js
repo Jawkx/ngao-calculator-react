@@ -32,6 +32,7 @@ function CardSelection(props) {
             <div className=" playing-card-container">
                 {props.cardSelectionDisplay ? cardsArr : null}
             </div >
+            <h1 className="reset-button" onClick={props.reset}> Repick </h1>
             {props.cardSelectionDisplay ? <SmallDisplay cardArr={props.currentValue} /> : null}
         </div>
     )

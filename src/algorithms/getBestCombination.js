@@ -7,7 +7,7 @@ import { getLargestNumber } from './getLargestNum'
 import { findDupes } from './findDupes'
 
 const getBestCombination = arr => {
-    
+
     const allPosibility = getPermutation(arr)
     const allPassport = getPassport(allPosibility)
 
@@ -21,32 +21,34 @@ const getBestCombination = arr => {
                 return [allPassport[i], "Full Picture"]
             }
 
-    if (arr.length === 5) {
-        const allPosibility = getPermutation(arr)
-        const allPassport = getPassport(allPosibility)
+            if (arr.length === 5) {
+                const allPosibility = getPermutation(arr)
+                const allPassport = getPassport(allPosibility)
 
-        if (allPassport.length !== 0) {
-            for (let i = 0; i < allPassport.length; i++) {
-                if (checkFullPicture(allPassport[i])) {
-                    return [allPassport[i], "Full Picture"]
+                if (allPassport.length !== 0) {
+                    for (let i = 0; i < allPassport.length; i++) {
+                        if (checkFullPicture(allPassport[i])) {
+                            return [allPassport[i], "Full Picture"]
+                        }
+
+
+                        if (checkDonggu(allPassport[i])) {
+                            return [allPassport[i], "Dong gu"]
+                        }
+
+                        if (checkBouBou(allPassport[i])) {
+                            return [allPassport[i], "Bou Bou"]
+                        }
+                    }
+
+                    return (getLargestNumber(allPassport))
+                } else {
+                    return [arr, "No Passport"]
                 }
-
-
-                if (checkDonggu(allPassport[i])) {
-                    return [allPassport[i], "Dong gu"]
-                }
-
-                if (checkBouBou(allPassport[i])) {
-                    return [allPassport[i], "Bou Bou"]
-                }
+            } else {
+                return [arr, "No Enough Card"]
             }
-
-            return (getLargestNumber(allPassport))
-        } else {
-            return [arr, "No Passport"]
         }
-    } else {
-        return [arr, "No Enough Card"]
     }
 }
 

@@ -30,27 +30,20 @@ function App() {
             handleClick={(value) => { setValue(currentValue.concat([value])) }}
             cardSelectionDisplay={currentValue.length < 5}
             currentValue={currentValue}
+            reset={() => reset()}
           />
-          
+
         </div>
 
         <div className="btm-part"
           style={currentValue.length < 5 ? { display: "none" } : null}
         >
-
           <CardDisplay
             cardsToDisplay={currentValue}
             calculated={calculated}
             answer={answer}
           />
-
           <h1 className="calculate-button" onClick={() => calculate()}>Calculate</h1>
-          <h1 className="reset-button"
-            onClick={() => reset()}
-          >
-            Repick Cards
-          </h1>
-
         </div>
 
       </body>
