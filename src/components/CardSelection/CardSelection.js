@@ -29,10 +29,10 @@ function CardSelection(props) {
     return (
         <div className="card-selection">
             {props.cardSelectionDisplay ? <h1 className="card-selection-text"> Select 5 cards</h1> : null}
-            {props.cardSelectionDisplay ? <SmallDisplay cardArr={props.currentValue} /> : null}
             <div className=" playing-card-container">
                 {props.cardSelectionDisplay ? cardsArr : null}
             </div >
+            {props.cardSelectionDisplay ? <SmallDisplay cardArr={props.currentValue} /> : null}
         </div>
     )
 }
