@@ -16,7 +16,7 @@ function App() {
 
   const reset = () => {
     setValue([])
-    setAnswer("")
+    setAnswer("Press Calculate to show best combination")
     setCalculated(false)
   }
   return (
