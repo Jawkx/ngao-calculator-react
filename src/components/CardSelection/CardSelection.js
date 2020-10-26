@@ -21,6 +21,7 @@ const cardList = [
 function CardSelection(props) {
     const cardsArr = cardList.map(item =>
         <PlayingCardSelect
+            key={item[0] + item[1]}
             type={item[1]}
             number={item[0]}
             handleClick={(value) => props.handleClick(value)}

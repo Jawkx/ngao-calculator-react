@@ -5,6 +5,7 @@ import PlayingCardDisplay from './PlayingCardDisplay'
 function CardDisplay(props) {
     const cardsArr = props.cardsToDisplay.map(item =>
         <PlayingCardDisplay
+            key={item[0] + item[1]}
             number={item[0]}
             suit={item[1]}
             type={item[2]}

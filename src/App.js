@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="app-title"> <span role="img" aria-label="cow">&#128046;</span>Ngao Calculator<span role="img" aria-label="cow">&#128046;</span></h1>
+        <h1 className="app-title"> Ngao Calculator </h1>
       </header>
       <body>
         <div className="top-part">
