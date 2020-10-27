@@ -48,6 +48,11 @@ code {
     margin-top: 0.5em;
     padding: 0.5em;
     border-radius: 0.5em;
+    transition: transform 0.2s;
+  }
+
+  .reset-button:hover {
+    transform: scale(1.1);
   }
 }
 .btm-part {
@@ -92,5 +97,24 @@ code {
 
   .calculate-button:hover {
     opacity: 0.9;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .github-button {
+    margin: 1.5em;
+    padding: 0.5em;
+    background-color: grey;
+    border-radius: 0.5em;
+    transition: transform 0.2s;
+  }
+
+  .github-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
   }
 }

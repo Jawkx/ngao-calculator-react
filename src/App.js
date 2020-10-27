@@ -24,29 +24,31 @@ function App() {
       <header className="App-header">
         <h1 className="app-title"> Ngao Calculator </h1>
       </header>
-      <body>
-        <div className="top-part">
-          <CardSelection
-            handleClick={(value) => { setValue(currentValue.concat([value])) }}
-            cardSelectionDisplay={currentValue.length < 5}
-            currentValue={currentValue}
-            reset={() => reset()}
-          />
 
-        </div>
+      <div className="top-part">
+        <CardSelection
+          handleClick={(value) => { setValue(currentValue.concat([value])) }}
+          cardSelectionDisplay={currentValue.length < 5}
+          currentValue={currentValue}
+          reset={() => reset()}
+        />
 
-        <div className="btm-part"
-          style={currentValue.length < 5 ? { display: "none" } : null}
-        >
-          <CardDisplay
-            cardsToDisplay={currentValue}
-            calculated={calculated}
-            answer={answer}
-          />
-          <h1 className="calculate-button" onClick={() => calculate()}>Calculate</h1>
-        </div>
+      </div>
 
-      </body>
+      <div className="btm-part"
+        style={currentValue.length < 5 ? { display: "none" } : null}
+      >
+        <CardDisplay
+          cardsToDisplay={currentValue}
+          calculated={calculated}
+          answer={answer}
+        />
+        <h1 className="calculate-button" onClick={() => calculate()}>Calculate</h1>
+      </div>
+      <div className="footer">
+        <h1 className="github-button" onClick={() => window.open("https://github.com/Jawkx/ngao-calculator-react", "_blank")}>Get the source code here</h1>
+      </div>
+
     </div >
   );
 }
