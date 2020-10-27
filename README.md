@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ngao Calculator React
 
-## Available Scripts
+## Description
+This is a calculator that will calculate the highest possible reading of a popular card game "Ngao"
 
-In the project directory, you can run:
+## How to win?
+Every player will get 5 cards where they can arrange in a manner that have the highest "power". The highest power's player win
 
-### `yarn start`
+## Rules
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Check if the sets is valid
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Every player are dealed with 5 cards, where the player will normally arrange it in two rows, the first row contain 2 cards, the second row containing the remaining 3 cards.
+2. The first rule of checking if the cards if "valid" is whether it have a "passport". Passport are placed at the second row, it consists of three cards that have a remainder of 0 when was divided by 10. While J Q and K are all considered as 10. If there is no valid "passport", the sets of card will automatically be considered as the lowest power
+3. Then the two cards above will become your "valid card". There is different combination of valid card which I will explain below.
 
-### `yarn test`
+### Check the "power" of the sets
+The "power" below are ranked from the most powerfull to the least powerful
+1. Full picture: This set is the rarest one, to get this set, one must have all 5 cards in either "J" , "Q" or "K"
+2. Donggu: In this set, the card in first row must be 1 Ace of Spade and another one must be either J, Q or K.
+3. Bou Bou: In this set, the cards in the first row must be same value.
+4. 10: If the sum of the number above are 10.
+5. number: get the sum of the number divide by 10 and get it's remainder
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
