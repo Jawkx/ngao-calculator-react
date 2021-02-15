@@ -43,13 +43,13 @@ code {
   background-color: darkslategray;
   color: white;
 
-  .icon {
-    margin-top: 0.5em;
-  }
-
   @include mobile {
     font-size: 2em;
     padding: 1em;
+  }
+
+  .icon {
+    margin-top: 0.5em;
   }
   .description {
     font-size: 0.4em;
